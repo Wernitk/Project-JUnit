@@ -33,4 +33,12 @@ public class Doctor {
     public int hashCode() {
         return Objects.hash(name, money);
     }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+               "name='" + name + '\'' +
+               ", money=" + money +
+               '}';
+    }
 }
