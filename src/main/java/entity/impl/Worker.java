@@ -11,14 +11,6 @@ public class Worker extends Person {
         this.position = position;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Position getPosition() {
         return position;
     }
