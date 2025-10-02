@@ -2,6 +2,7 @@ package service.impl;
 
 import entity.impl.Product;
 import entity.impl.Store;
+import service.ProductService;
 import service.StoreService;
 
 import java.util.ArrayList;
@@ -11,6 +12,11 @@ import java.util.Map;
 
 public class StoreServiceImpl implements StoreService {
     private final List<Store> stores = new ArrayList<>();
+    private final ProductService productService;
+
+    public StoreServiceImpl(ProductService productService) {
+        this.productService = productService;
+    }
 
     @Override
     public void addStore(Store store) {
@@ -28,5 +34,10 @@ public class StoreServiceImpl implements StoreService {
     @Override
     public Map<Product, Integer> getAllProducts(Store store) {
         return new HashMap<>(store.getProductIntegerMap());
+    }
+
+    public Product addProductToStore(Store store, Product product, int quantity) {
+        productService.addProduct(store, product, quantity);
+        return productService.getProduct(store, product);
     }
 }
