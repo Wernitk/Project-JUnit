@@ -23,18 +23,6 @@ public class Doctor {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Doctor doctor = (Doctor) o;
-        return Double.compare(money, doctor.money) == 0 && Objects.equals(name, doctor.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, money);
-    }
-
-    @Override
     public String toString() {
         return "Doctor{" +
                "name='" + name + '\'' +
