@@ -6,10 +6,7 @@ import entity.impl.Product;
 import entity.impl.Store;
 import entity.impl.Worker;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.function.Supplier;
 
 public class ModelsUtils {
@@ -40,7 +37,9 @@ public class ModelsUtils {
     public static final String TEST_PHONE = "+380967672211";
     public static final String TEST_EMAIL = "wer@gmail.com";
     public static final Integer TEST_QUANTITY = 100;
-
+    public static final Map<Product, Integer> TEST_PRODUCTS = new HashMap<>(
+            Map.of(getProduct(), TEST_QUANTITY)
+    );
     public static <T> T getRandomElement(List<T> list) {
         return list.get(RANDOM.nextInt(list.size()));
     }
