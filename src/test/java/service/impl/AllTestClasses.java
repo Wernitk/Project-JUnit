@@ -5,7 +5,7 @@ import org.junit.platform.suite.api.Suite;
 import org.junit.platform.suite.api.SuiteDisplayName;
 
 @Suite
-@SelectClasses({WorkerServiceImplTest.class, StoreServiceImplTest.class})
+@SelectClasses({WorkerServiceImplTest.class, StoreServiceImplTest.class, ConsumerServiceImplTest.class, ProductServiceImplTest.class})
 @SuiteDisplayName("All works")
 public class AllTestClasses {
 
